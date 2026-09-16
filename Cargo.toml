@@ -1,0 +1,28 @@
+[package]
+name = "certutils"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.71.0"
+description = "High-level X.509 certificate, CSR, and key utilities backed by AWS-LC"
+readme = "README.md"
+license = "BSD-2-Clause"
+repository = "https://github.com/ogital-net/certutils"
+documentation = "https://docs.rs/certutils"
+keywords = ["x509", "certificate", "csr", "pkcs10", "acme"]
+categories = ["cryptography", "web-programming"]
+include = [
+    "src/**/*.rs",
+    "tests/**/*.rs",
+    "examples/**/*.rs",
+    "Cargo.toml",
+    "README.md",
+    "LICENSE",
+]
+
+[features]
+default = []
+jose4rs = ["dep:jose4rs"]
+
+[dependencies]
+aws-lc-sys = ">=0.40, <2"
+jose4rs = { version = "0.6.0", optional = true, default-features = false, features = ["aws-lc", "base64-simd"] }
