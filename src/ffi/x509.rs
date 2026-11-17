@@ -1282,10 +1282,10 @@ mod tests {
             parsed.validity().expect("validity should parse"),
             (1_700_000_000, 1_800_000_000)
         );
-        assert!(!parsed
-            .serial_number()
-            .expect("serial should parse")
-            .is_empty());
+        assert_ne!(
+            parsed.serial_number().expect("serial should parse"),
+            [] as [u8; 0]
+        );
         let _parsed_public_key = parsed.public_key().expect("public key should parse");
 
         verify_chain(
