@@ -15,7 +15,7 @@ remain limited to P-256 and supported RSA keys.
 ## Minimum supported Rust version
 
 The core crate supports Rust 1.71 and newer. The optional `jose4rs` feature
-currently requires Rust 1.88, matching `jose4rs` 0.6.
+currently requires Rust 1.88, matching `jose4rs` 0.7.
 
 ## Verification policy
 

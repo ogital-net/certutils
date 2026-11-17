@@ -161,9 +161,9 @@ dependencies = [
 
 [[package]]
 name = "jose4rs"
-version = "0.6.0"
+version = "0.7.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "c4e4cfb52f9684d745e50c569c5873da1b253861df7e2268305064afcf1b66d3"
+checksum = "380dbf792530413b9b3d3b76dfb18f64aab1f0569d4d0c13e3108a235a5467cd"
 dependencies = [
  "aws-lc-sys",
  "base64-simd",
